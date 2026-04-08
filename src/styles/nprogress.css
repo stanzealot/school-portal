@@ -1,0 +1,15 @@
+/* NProgress — brand bar (#20A8D8), minimal spinner */
+#nprogress .bar {
+  background: #20a8d8;
+  height: 3px;
+}
+
+#nprogress .peg {
+  box-shadow:
+    0 0 10px #20a8d8,
+    0 0 5px #20a8d8;
+}
+
+#nprogress .spinner {
+  display: none;
+}

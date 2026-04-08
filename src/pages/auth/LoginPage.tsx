@@ -11,7 +11,9 @@ import { APP_NAME } from '@/constants/app.constants';
 import { cn } from '@/utils';
 import { useLogin } from '@/hooks/api/useLogin';
 import { mapApiUserToUser } from '@/lib/api/mapUser';
+import { DEMO_LOGIN_PASSWORD } from '@/lib/api/demo/mockAuth';
 import { getApiErrorMessage } from '@/lib/api/errors';
+import { DEMO_MODE } from '@/lib/env';
 
 // ─── Validation Schema ─────────────────────────────────────────
 const loginSchema = z.object({
@@ -234,6 +236,19 @@ const LoginForm = () => {
         >
           Welcome back! Please enter your details.
         </p>
+
+        {DEMO_MODE && (
+          <p
+            className="mt-4 text-[13px] leading-relaxed rounded-[4px] border border-amber-200 bg-amber-50 px-3 py-2"
+            style={{ color: '#1F2329' }}
+          >
+            <span className="font-semibold">Demo:</span> use username{' '}
+            <code className="text-[12px] bg-amber-100/80 px-1 rounded">student</code>,{' '}
+            <code className="text-[12px] bg-amber-100/80 px-1 rounded">lecturer</code>, or{' '}
+            <code className="text-[12px] bg-amber-100/80 px-1 rounded">exam_officer</code> — password{' '}
+            <code className="text-[12px] bg-amber-100/80 px-1 rounded">{DEMO_LOGIN_PASSWORD}</code>
+          </p>
+        )}
       </div>
 
       {/* Form */}

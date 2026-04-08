@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { ArrowLeft, Lock, Copy, Check, Clock, HelpCircle } from 'lucide-react';
 import { ROUTES } from '@/constants/routes.constants';
-import { cn } from '@/utils';
 
 // Reusable for school fees, departmental dues, other payments
 // The page title/amounts adapt based on the route

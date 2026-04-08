@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Home, CheckCircle2, XCircle, HelpCircle, X, ArrowRight, Lock } from 'lucide-react';
+import { Home, CheckCircle2, XCircle, HelpCircle, X, ArrowRight } from 'lucide-react';
 import { ROUTES } from '@/constants/routes.constants';
 import { cn } from '@/utils';
 

@@ -610,7 +610,7 @@ const OLevelTab = () => {
   const [results, setResults] = useState<OLevelResult[]>(MOCK_OLEVEL_RESULTS);
   const [addOpen, setAddOpen] = useState(false);
 
-  const { register, handleSubmit, formState: { errors }, reset } = useForm<OLevelExamData>({
+  const { register, handleSubmit, formState: { errors } } = useForm<OLevelExamData>({
     resolver: zodResolver(olevelExamSchema),
     defaultValues: { examNo: '2110379751BG', examYear: '2023', examType: 'WAEC', sitting: 'First' },
   });
